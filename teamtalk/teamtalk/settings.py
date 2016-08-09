@@ -11,6 +11,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# talk_app.apps.TalkAppConfig
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -19,8 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'talk_app.apps.TalkAppConfig',
     'rest_framework',
+    'talk_app',
 ]
 
 REST_FRAMEWORK = {
