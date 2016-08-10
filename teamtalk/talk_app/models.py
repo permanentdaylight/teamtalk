@@ -18,7 +18,7 @@ COACHING_STYLE = (
 
 class Team(models.Model):
     name = models.CharField(max_length=255)
-    coach = models.ForeignKey(User, on_delete=models.CASCADE)
+    coach = models.OneToOneField('Coach', on_delete=models.CASCADE)
     city = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -29,8 +29,8 @@ class Team(models.Model):
 class Player(models.Model):
     name = models.CharField(max_length=255)
     age = models.PositiveIntegerField()
-    position = models.CharField(choices=POSITIONS, max_length=3)
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    position = models.CharField(choices=POSITIONS, max_length=2)
+    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='players')
 
     def __str__(self):
         return self.name
@@ -39,7 +39,7 @@ class Player(models.Model):
 class Coach(models.Model):
     name = models.CharField(max_length=255)
     age = models.PositiveIntegerField()
-    coaching_style = models.CharField(choices=COACHING_STYLE, max_length=1)
+    coaching_style = models.CharField(choices=COACHING_STYLE, max_length=3)
 
     class Meta:
         verbose_name_plural = "coaches"
