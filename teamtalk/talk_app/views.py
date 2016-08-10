@@ -8,7 +8,8 @@ from .serializers import TeamSerializer, PlayerSerializer, CoachSerializer
 
 
 def index(request):
-    context = {}
+    teams = Team.objects.all()
+    context = {'teams': teams}
     return render(request, "talk_app/index.html", context)
 
 
