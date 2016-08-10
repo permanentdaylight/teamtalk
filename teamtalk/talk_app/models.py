@@ -21,6 +21,7 @@ class Team(models.Model):
     coach = models.OneToOneField('Coach', on_delete=models.CASCADE)
     city = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    photo = models.ImageField(upload_to="static/talk_app/img", null=True, blank=True)
 
     def __str__(self):
         return self.name

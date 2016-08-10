@@ -11,6 +11,6 @@ router.register(r'coaches', views.CoachesViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('talk_app.urls')),
     url(r'^api/', include(router.urls)),
+    url(r'^', include('talk_app.urls')),
 ]

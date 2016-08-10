@@ -452,7 +452,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background: #e1719d;
+			background: #006400;
 		}
 
 		input[type="submit"].alt,
@@ -488,8 +488,8 @@
 /* Wrapper */
 
 	.wrapper.style1 {
-		padding-top: 10em;
-		padding-bottom: 2em;
+		padding-top: 1em;
+		padding-bottom: 7em;
 		background: url(../img/bg.jpg) no-repeat center top;
 		/*background-color: #778899;*/
 		background-size: cover;
@@ -520,13 +520,13 @@
 /* Logo */
 
 	#logo {
-		font-size: 1.2em;
+		font-size: 2.9em;
 		cursor: default;
+		text-align: center;
 	}
 
 	#logo h1 {
 		display: inline-block;
-		text-transform: uppercase;
 	}
 
 /* Navigation */
@@ -610,6 +610,7 @@
 	}
 
 		#copyright a {
+			padding-top: 1em;
 			text-decoration: none;
 			color: #ddd;
 			color: rgba(255, 255, 255, 0.4) !important;
