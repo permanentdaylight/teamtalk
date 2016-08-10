@@ -6,8 +6,10 @@ from .models import Player, Team, Coach
 from .serializers import TeamSerializer, PlayerSerializer, CoachSerializer
 
 
+
 def index(request):
-    return HttpResponse("Welcome to TeamTalk!")
+    context = {}
+    return render(request, "talk_app/index.html", context)
 
 
 class TeamsViewSet(viewsets.ModelViewSet):
