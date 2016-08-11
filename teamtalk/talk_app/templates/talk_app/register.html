@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Create a team</h1>
+    <form id="team_form" action="index.html" method="post">
+      {{ team_form.as_p }}
+      {% csrf_token %}
+
+      <input type="submit" name="submit" value="Register"/>
+
+      <!-- Footer -->
+
+    </form>
+  </body>
+</html>
